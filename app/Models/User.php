@@ -51,7 +51,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $appends = [
-        'profile_photo_url',
+        // 'profile_photo_path',
     ];
 
     /**
@@ -129,7 +129,7 @@ class User extends Authenticatable
 
     public static function getList(Request $request): array
     {
-        $selectedFields = ['id', 'name', 'email', 'profile_photo_url', 'created_at'];
+        $selectedFields = ['id', 'name', 'email', 'profile_photo_path', 'created_at'];
         $query = self::query()
             ->select($selectedFields)
             ->withCasts(['created_at' => 'date:Y-m-d H:i:s'])

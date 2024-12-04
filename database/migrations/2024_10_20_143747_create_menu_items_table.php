@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('icon')->nullable();
             $table->string('identifier')->nullable()->index();
+            $table->string('path')->nullable();
             $table->string('redirect')->nullable();
             $table->tinyInteger('type')->default(0);
             $table->unsignedBigInteger('parent_id')->nullable()->index();
